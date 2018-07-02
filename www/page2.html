@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="components/jquery-3.3.1.min.js"></script>
+    <script src="components/banco.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(document).ready(function(){
+            preencheAno();
+            preencheLivros();
+            desabilitar();
+        });
+    </script>
+</head>
+<body>
+	<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <label> Lista de Livros: </label>
+            <select id="listalivros" class="form-control"> </select>
+        </div>
+	  </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label> Titulo do Livro: </label>
+                <input type="text" id="titulo" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label> Autor do Livro: </label>
+                <input type="text" id="autor" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <label> Ano: </label>
+                <select id="ano" class="form-control"> </select>
+            </div>
+            <div class="col-xs-6">
+                <label> ISBN: </label>
+                <input type="number" id="isbn" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+               <button class="btn btn-warning btn-block" id="editar">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true">   
+               </button>
+            </div>
+            <div class="col-xs-3">
+               <button class="btn btn-info btn-block" id="block">
+                    <span class="glyphicon glyphicon-stop" aria-hidden="true"> 
+               </button>
+            </div>
+            <div class="col-xs-3">
+               <button class="btn btn-success btn-block" id="salvaredit">
+                   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"> 
+               </button>
+            </div>
+            <div class="col-xs-3">
+               <button class="btn btn-danger  btn-block" id="deletar">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true">
+               </button>
+            </div>
+        </div>
+	</div>  
+    
+</body>
+</html>
